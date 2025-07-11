@@ -25,14 +25,15 @@ public class BaseTest {
 
     public ThreadLocal<WebDriver> getWebDriverPool() { return this.webDriverPool;}
 
+    public WebDriver createWebDriver() {
+        return new ChromeDriver();
+    }
+
     @BeforeMethod
     public void setup() {
         this.webDriverPool.set(createWebDriver());
     }
 
-    public WebDriver createWebDriver() {
-        return new ChromeDriver();
-    }
 
     @AfterMethod
     public void tearDown() {

@@ -2,7 +2,6 @@ package com.emag.tests;
 
 import com.emag.init.BaseTest;
 import com.emag.pages.HomePage;
-import com.emag.stepDefinition.HomePageSteps;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -31,17 +30,17 @@ public class HomePageTests extends BaseTest {
         //page.user_landed_homepage();
         //WebDriver driver = getDriver();
         WebDriver driver = getDriver();
-        HomePageSteps homePageSteps = new HomePageSteps(driver);
-        homePageSteps.user_landed_homepage();
-        homePageSteps.userClicksOnHeader();
+        HomePage homePage = new HomePage(driver);
+        homePage.goToHomePage();
+        homePage.clickOnHeader();
     }
 
     @Test
     public void testResigilate() throws InterruptedException {
         WebDriver driver = getDriver();
-        HomePageSteps homePageSteps = new HomePageSteps(driver);
-        homePageSteps.user_landed_homepage();
-        homePageSteps.clickOnResigilate();
+        HomePage homePage = new HomePage(driver);
+        homePage.goToHomePage();
+        homePage.clickOnResigilate();
 
     }
     @Test
