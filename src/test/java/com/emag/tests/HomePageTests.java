@@ -46,41 +46,6 @@ public class HomePageTests extends BaseTest {
     }
     @Test
     public void test() {
-
-        Integer[] a = new Integer[3];
-        a[0] = 1;
-        a[1] = 2;
-        a[2] = 2;
-        //a.
-        System.out.println(a[2] + " " + a[1]);
-        //Integer[] b = (Integer[]) Arrays.stream(a).distinct().toArray();
-        //System.out.println(b);
-        System.out.println(Arrays.stream(a).distinct().toList());
-
-        ArrayList<Character> chars = new ArrayList<>();
-        chars.add('a');
-        chars.add('b');
-        chars.add('b');
-        System.out.println(chars);
-
-        Set<Character> chars2 = new HashSet<>() ;
-        chars2.add('a');
-        chars2.add('b');
-        chars2.add('c');
-        System.out.println(chars2.size());
-
-
-        String m = "abcde";
-        for (int i=0;i<m.length();i++) {
-            System.out.println(m.charAt(i));
-        }
-        System.out.println(m.chars().toString());
-        //System.out.println(abc.a);
-        try{
-            Assert.assertTrue(2==30);
-        } catch (Exception exp) {
-            System.out.println("eroare");
-        }
         HomePage page = new HomePage(getDriver());
     }
 }

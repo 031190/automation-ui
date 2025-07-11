@@ -9,7 +9,6 @@ public class HomePageSteps extends HomePage {
         super(driver);
     }
 
-    @Given("User has landed on the page")
     public void user_landed_homepage() {
         //HomePage home_page = new HomePage();
         //home_page.getHomePage();
